@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hey Vanshika 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffe4e1, #fff0f5);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.2em;
+    }
+    .paw {
+      font-size: 1.2em;
+      margin-left: 0.2em;
+    }
+    .btn {
+      margin-top: 1.5em;
+      padding: 0.7em 1.2em;
+      font-size: 1em;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #ff85c1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hey vanshika... <span class="paw">🐾</span></h1>
+  <p>I made something just for you ❤️</p>
+
+  <button class="btn" onclick="startExperience()">Tap to continue</button>
+
+  <!-- Working audio hosted on a reliable CDN -->
+  <audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function startExperience() {
+      const music = document.getElementById("bgMusic");
+      music.play().catch((e) => console.log("Autoplay blocked:", e));
+      // Example of next layer (you’ll change this later)
+      alert("Next surprise loading soon 😍");
+    }
+  </script>
+
+</body>
+</html>
