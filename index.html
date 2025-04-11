@@ -1,0 +1,45 @@
+ <source src="https://cdn.pixabay.com/download/audio/2022/03/31/audio_522f3dbe0a.mp3?filename=birthday-romantic-112143.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container" id="layer">
+    <h1>Hey vanshika... 🐾</h1>
+    <p>I made something just for you 💖</p>
+    <button onclick="nextLayer()">Tap to continue</button>
+  </div>
+
+  <script>
+    const layers = [
+      {
+        title: "You're paws-itively the best thing in my life 😽",
+        text: "Every moment with you is a moment of purr-fection."
+      },
+      {
+        title: "Your smile is my favorite place to get lost in 💫",
+        text: "I could stare at you forever and still find something new to love."
+      },
+      {
+        title: "If I had 9 lives...",
+        text: "I'd like to be with you  in every single one 🐾💞"
+      },
+      {
+        title: "Happy Birthday cutie 👑",
+        text: "You’re the most beautiful soul I know, and I’m so lucky to be yours frnd ."
+      }
+    ];
+
+    let index = 0;
+
+    function nextLayer() {
+      if (index < layers.length) {
+        document.getElementById('layer').innerHTML = `
+          <h1>${layers[index].title}</h1>
+          <p>${layers[index].text}</p>
+          ${index === layers.length - 1 ? '' : '<button onclick=\"nextLayer()\">Next</button>'}
+        `;
+        index++;
+      }
+    }
+  </script>
+</body>
+</html>
